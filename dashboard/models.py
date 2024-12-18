@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from properties import settings
+
+
 class Property(models.Model):
     title = models.CharField(max_length=100)  # Title of the property
     description = models.TextField()  # Description of the property
@@ -23,7 +26,7 @@ class Inquiry(models.Model):
         unique_together = (("property", "user_email"),)  # Ensure unique inquiry per property and email
 
 class DashboardActivity(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # Foreign key to the User model
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     activity_type = models.CharField(max_length=100)  # Type of activity performed
     activity_date = models.DateTimeField(auto_now_add=True)  # Timestamp for activity date
 
