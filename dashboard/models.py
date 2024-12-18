@@ -35,7 +35,7 @@ class DashboardActivity(models.Model):
         return f"{self.user.username} - {self.activity_type}"
 
 class UserProfile(models.Model):
-    user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+    user = models.OneToOneField('settings.AUTH_USER_MODEL', on_delete=models.CASCADE)
     bio = models.TextField()
     profile_picture = models.ImageField(upload_to='profile_pics/')
 
