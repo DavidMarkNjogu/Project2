@@ -10,7 +10,7 @@ def signup(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()  # This should create a CustomUser  instance
+            user = form.save()  #Create the user
             backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, user, backend=backend)  # Log the user in
             messages.success(request, 'Signup successful.')
