@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from listings.models import PropertyListing  # Assuming you have a PropertyListing model
 
 class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # User who made the booking
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)    
     property_listing = models.ForeignKey(PropertyListing, on_delete=models.CASCADE)  # Property being booked
     booking_date = models.DateTimeField(auto_now_add=True)  # Date when the booking was made
     start_date = models.DateField()  # Start date of the booking
