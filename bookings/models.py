@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from listings.models import PropertyListing  # Assuming you have a PropertyListing model
+from django.conf import settings
 
 class Booking(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)    

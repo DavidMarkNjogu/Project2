@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
-from properties import settings
+from django.comf import settings
 
 
 class Property(models.Model):
