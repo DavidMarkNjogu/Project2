@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser, Group, Permission 
+from django.contrib.auth.models import AbstractUser, Group, Permission
+
 
 # Custom user model extending AbstractUser
 class CustomUser (AbstractUser ):
