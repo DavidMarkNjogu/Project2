@@ -10,11 +10,11 @@ def signup(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()
+            user = form.save()  # This should create a CustomUser  instance
             backend = 'django.contrib.auth.backends.ModelBackend'
-            login(request, user, backend=backend)
+            login(request, user, backend=backend)  # Log the user in
             messages.success(request, 'Signup successful.')
-            return redirect('home')
+            return redirect('home') # Redirect to home or another page
     else:
         form = CustomUserCreationForm()
     return render(request, 'account/signup.html', {'form': form})

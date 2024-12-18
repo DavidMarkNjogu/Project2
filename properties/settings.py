@@ -102,7 +102,8 @@ ACCOUNT_FORMS = {
     'signup': 'users.forms.CustomSignupForm',
 }
 
-
+#hANDLES ISSUES PERTAINING LOGIN AND CUSTOMUSER MODELS
+AUTH_USER_MODEL = 'users.CustomUser '  # Ensure this points to your CustomUser  model
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
