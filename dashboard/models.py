@@ -1,6 +1,9 @@
+from django.conf.global_settings import AUTH_USER_MODEL
 from django.db import models
 from django.contrib.auth.models import User
 from django.conf import settings
+from properties import settings
+from properties.settings import AUTH_USER_MODEL
 
 
 class Property(models.Model):
@@ -37,7 +40,7 @@ class DashboardActivity(models.Model):
         return f"{self.user.username} - {self.activity_type}"
 
 class UserProfile(models.Model):
-    user = models.OneToOneField('settings.AUTH_USER_MODEL', on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     bio = models.TextField()
     profile_picture = models.ImageField(upload_to='profile_pics/')
 
