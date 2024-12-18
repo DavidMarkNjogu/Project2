@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'dashboard',
     'listings',
     'bookings',
+    #'users',
+    #'profiles',
     'users.apps.UsersConfig', # Ensure users app is registered
     'profiles.apps.ProfilesConfig',
 
@@ -103,7 +105,7 @@ ACCOUNT_FORMS = {
 }
 
 #hANDLES ISSUES PERTAINING LOGIN AND CUSTOMUSER MODELS
-AUTH_USER_MODEL = 'users.CustomUser '  # Ensure this points to your CustomUser  model
+AUTH_USER_MODEL = 'users.CustomUser'  # Ensure this points to your CustomUser  model
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
