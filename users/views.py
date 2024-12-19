@@ -4,17 +4,23 @@ from django.contrib import messages
 from django.urls import reverse_lazy
 from django.contrib.auth.views import PasswordChangeView
 from .forms import CustomUserCreationForm, CustomLoginForm, CustomSignupForm
+from profiles.models import Profile  # Ensure you import the UserProfile model
 
 # Signup view to handle user registration
 def signup(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
-            user = form.save()  #Create the user
+            user = form.save()  # Create the user
+            print(f"User  created: {user}")  # Debugging statement
+            Profile.objects.create(user=user)  # Create the profile for the user
+            print(f"Profile created for user: {user.username}")  # Debugging statement
             backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, user, backend=backend)  # Log the user in
             messages.success(request, 'Signup successful.')
-            return redirect('home') # Redirect to home or another page
+            return redirect('home')  # Redirect to home or another page
+        else:
+            messages.error(request, 'Signup failed. Please correct the errors below.')
     else:
         form = CustomUserCreationForm()
     return render(request, 'account/signup.html', {'form': form})
