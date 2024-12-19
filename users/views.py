@@ -9,7 +9,7 @@ from profiles.models import Profile  # Ensure you import the UserProfile model
 # Signup view to handle user registration
 def signup(request):
     if request.method == 'POST':
-        form = CustomUser CreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()  # Create the user
             print(f"User  created: {user}")  # Debugging statement
@@ -28,7 +28,7 @@ def signup(request):
         else:
             messages.error(request, 'Signup failed. Please correct the errors below.')
     else:
-        form = CustomUser CreationForm()
+        form = CustomUserCreationForm()
     return render(request, 'account/signup.html', {'form': form})
 
 # Custom password change view extending PasswordChangeView
