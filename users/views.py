@@ -35,14 +35,14 @@ def signup(request):
 class CustomPasswordChangeView(PasswordChangeView):
     success_url = reverse_lazy('account_change_password_done')
     template_name = 'account/password_change.html'
-
-# Login view to handle user authentication
 def login_view(request):
     if request.method == 'POST':
         form = CustomLoginForm(request.POST)
+        print(f"Login form data: {request.POST}")  # Debugging statement
         if form.is_valid():
             username = form.cleaned_data['login']
             password = form.cleaned_data['password']
+            print(f"Attempting to authenticate user: {username}")  # Debugging statement
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
@@ -50,6 +50,9 @@ def login_view(request):
                 return redirect('home')
             else:
                 messages.error(request, 'Invalid username or password.')
+                print("Authentication failed.")  # Debugging statement
+        else:
+            print(f"Form errors: {form.errors}")  # Print form errors for debugging
     else:
         form = CustomLoginForm()
     return render(request, 'account/login.html', {'form': form})
