@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+
+{% block head %}
+    {{ block.super }}  {# This includes the base head content #}
+    <link rel="stylesheet" href="{% static 'style/css/pages.css' %}"> {# Link to the about-specific CSS #}
+{% endblock %}
+
+{% block content %}
+
+<!-- BLOG START -->
+<div class="blog">
+    <div class="blog-container">
+        <div class="testimonials-cont">
+            <span>Latest Stories and news</span>
+            <h2>Here Are Some Of Our Recent Articles.</h2>
+        </div>
+        <div class="blog-wraper">
+            <!-- ONE -->
+            <div class="blog-box">
+                <img src="{% static 'images/blog1.jpg' %}" alt="">
+                <div class="overlay-2"></div>
+                <div class="blog-box-cont">
+                    <h2>The best Place to live in 2025 according to our experts</h2>
+                    <p>MARCH 3, 2024</p>
+                </div>
+            </div>
+
+            <!-- END -->
+            <!-- ONE -->
+            <div class="blog-box">
+                <img src="{% static 'images/blog3.jpg' %}" alt="">
+                <div class="overlay-2"></div>
+                <div class="blog-box-cont">
+                    <h2>The best Place to live in 2025 according to our experts</h2>
+                    <p>MARCH 3, 2024</p>
+                </div>
+            </div>
+
+            <!-- END -->
+            <!-- ONE -->
+            <div class="blog-box">
+                <img src="{% static 'images/blog2.jpg' %}" alt="">
+                <div class="overlay-2"></div>
+                <div class="blog-box-cont">
+                    <h2>The best Place to live in 2025 according to our experts</h2>
+                    <p>MARCH 3, 2024</p>
+                </div>
+            </div>
+
+            <!-- END -->
+            <!-- ONE -->
+            <div class="blog-box">
+                <img src="{% static 'images/blog4.jpg' %}" alt="">
+                <div class="overlay-2"></div>
+                <div class="blog-box-cont">
+                    <h2>The best Place to live in 2025 according to our experts</h2>
+                    <p>MARCH 3, 2024</p>
+                </div>
+            </div>
+
+            <!-- END -->
+            <!-- ONE -->
+            <div class="blog-box">
+                <img src="{% static 'images/blog5.jpg' %}" alt="">
+                <div class="overlay-2"></div>
+                <div class="blog-box-cont">
+                    <h2>The best Place to live in 2025 according to our experts</h2>
+                    <p>MARCH 3, 2024</p>
+                </div>
+            </div>
+
+            <!-- END -->
+            <!-- ONE -->
+            <div class="blog-box">
+                <img src="{% static 'images/blog6.jpg' %}" alt="">
+                <div class="overlay-2"></div>
+                <div class="blog-box-cont">
+                    <h2>The best Place to live in 2025 according to our experts</h2>
+                    <p>MARCH 3, 2024</p>
+                </div>
+            </div>
+
+            <!-- END -->
+        </div>
+    </div>
+</div>
+    
+{% endblock%}
+<!-- BLOG END -->

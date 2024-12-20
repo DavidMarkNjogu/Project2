@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}About Us{% endblock %}
+
+{% block head %}
+    {{ block.super }}  {# This includes the base head content #}
+    <link rel="stylesheet" href="{% static 'style/css/pages.css' %}"> {# Link to the about-specific CSS #}
+{% endblock %}
+
+{% block content %}
+    
+<!-- TEAM START -->
+<div class="team">
+    <div class="team-container">
+        <div class="testimonials-cont">
+            <span>Our Team Members</span>
+            <h2>Some of our Team Members.</h2>
+        </div>
+        <div class="team-wraper">
+            <div class="team-single-wraper">
+                <img src="{% static 'images/team1.jpg' %}" alt="">
+                <div class="teams-social">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="teams-cont">
+                    <h2>Francis Njuguna</h2>
+                    <p>Ceo & Founder</p>
+                </div>
+            </div>
+            <div class="team-single-wraper">
+                <img src="{% static 'images/team3.jpg' %}" alt="">
+                <div class="teams-social">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="teams-cont">
+                    <h2>Emily Johnson</h2>
+                    <p>Estate Agents</p>
+                </div>
+            </div>
+            <div class="team-single-wraper">
+                <img src="{% static 'images/team2.jpg' %}" alt="">
+                <div class="teams-social">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="teams-cont">
+                    <h2>John Doe </h2>
+                    <p>Estate Agents</p>
+                </div>
+            </div>
+            <div class="team-single-wraper">
+                <img src="{% static 'images/team4.jpg' %}" alt="">
+                <div class="teams-social">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <div class="teams-cont">
+                    <h2>Alex Smith </h2>
+                    <p>Estate Agents</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TEAM END -->
+
+<!-- TESTIMONIALS START -->
+<div class="testimonials">
+    <div class="testimonials-container">
+        <div class="testimonials-cont">
+            <span>Customer Feedback</span>
+            <h2>What Our Customers Are Saying.</h2>
+        </div>
+        <div class="testimonials-wraper">
+            <!-- one -->
+<div class="testimonial-box">
+    <div class="test-star">
+        <div class="rank-one">
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h3>Great Services!</h3>
+        </div>
+        <div class="rank-two">
+            <img src="{% static 'images/google3.svg' %}" alt="">
+        </div>
+    </div>
+    <p>As a real estate agent, I have had the pleasure of working with Just Home. They have been incredibly helpful and professional. I can't recommend them enough!</p>
+    <h4><i class="fa-regular fa-thumbs-up" style="color:var(--maroon);"> &nbsp;</i> Francis Njuguna</h4>
+</div>
+<!-- end -->
+            <!-- one -->
+<div class="testimonial-box">
+    <div class="test-star">
+        <div class="rank-one">
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h3>Beautiuful Houses!</h3>
+        </div>
+        <div class="rank-two">
+            <img src="{% static 'images/google3.svg' %}" alt="">
+        </div>
+    </div>
+    <p>As a real estate agent, I have had the pleasure of working with Just Home. They have been incredibly helpful and professional. I can't recommend them enough!</p>
+    <h4><i class="fa-regular fa-thumbs-up" style="color:var(--maroon);"> &nbsp;</i> Emily</h4>
+</div>
+<!-- end -->
+            <!-- one -->
+<div class="testimonial-box">
+    <div class="test-star">
+        <div class="rank-one">
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h3>Green Environment!</h3>
+        </div>
+        <div class="rank-two">
+            <img src="{% static 'images/google3.svg' %}" alt="">
+        </div>
+    </div>
+    <p>As a real estate agent, I have had the pleasure of working with Just Home. They have been incredibly helpful and professional. I can't recommend them enough!</p>
+    <h4><i class="fa-regular fa-thumbs-up" style="color:var(--maroon);"> &nbsp;</i> Erickson</h4>
+</div>
+<!-- end -->
+            <!-- one -->
+<div class="testimonial-box">
+    <div class="test-star">
+        <div class="rank-one">
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h3>Happy Me!</h3>
+        </div>
+        <div class="rank-two">
+            <img src="{% static 'images/google3.svg' %}" alt="">
+        </div>
+    </div>
+    <p>As a real estate agent, I have had the pleasure of working with Just Home. They have been incredibly helpful and professional. I can't recommend them enough!</p>
+    <h4><i class="fa-regular fa-thumbs-up" style="color:var(--maroon);"> &nbsp;</i> Moses</h4>
+</div>
+<!-- end -->
+            <!-- one -->
+<div class="testimonial-box">
+    <div class="test-star">
+        <div class="rank-one">
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h3>Green Experience!</h3>
+        </div>
+        <div class="rank-two">
+            <img src="{% static 'images/google3.svg' %}" alt="">
+        </div>
+    </div>
+    <p>As a real estate agent, I have had the pleasure of working with Just Home. They have been incredibly helpful and professional. I can't recommend them enough!</p>
+    <h4><i class="fa-regular fa-thumbs-up" style="color:var(--maroon);"> &nbsp;</i> John</h4>
+</div>
+<!-- end -->
+            <!-- one -->
+<div class="testimonial-box">
+    <div class="test-star">
+        <div class="rank-one">
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+        </div>
+        <h3>professional Staff!</h3>
+        </div>
+        <div class="rank-two">
+            <img src="{% static 'images/google3.svg' %}" alt="">
+        </div>
+    </div>
+    <p>As a real estate agent, I have had the pleasure of working with Just Home. They have been incredibly helpful and professional. I can't recommend them enough!</p>
+    <h4><i class="fa-regular fa-thumbs-up" style="color:var(--maroon);"> &nbsp;</i> Jane</h4>
+</div>
+<!-- end -->
+
+</div>
+</div>
+</div>
+
+<!-- TESTIMONIALS END -->
+
+
+        <h3 class="mt-4">Contact Us</h3>
+        <p>If you have any questions, feel free to reach out to us at <a href="mailto:help@example.com">help@example.com</a>.</p>
+    </div>
+{% endblock %}

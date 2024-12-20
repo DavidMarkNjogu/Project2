@@ -31,27 +31,46 @@ window.addEventListener('scroll', function() {
 // faq items
 const faqData = [
     {
-        question: 'What is Ranqiify?',
-        answer: 'Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.'
+        question: 'What is Haven Heights?',
+        answer: 'Haven Heights is a comprehensive real estate management system designed to facilitate property management, listings, and client interactions. It allows users to browse property listings, inquire about properties, and manage real estate transactions efficiently.'
     },
     {
-        question: 'Can I use Ranqiify for free?',
-        answer: 'Yes!, Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.'
+        question: 'How do I search for properties on Haven Heights?',
+        answer: 'To search for properties on Haven Heights, simply use the search bar on the homepage or navigate to the property listings section. You can filter results by location, price range, property type, and other criteria to find properties that match your needs.'
     },
     {
-        question: 'Can I use Ranqiify for free?',
-        answer: 'Yes!, Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.'
+        question: 'Can I list my property on Haven Heights?',
+        answer: 'Yes, you can list your property on Haven Heights. To do so, create an account or log in if you already have one. Once logged in, navigate to the "List a Property" section, fill in the required details about your property, and submit your listing for review. Our team will review and approve your listing before it goes live on the platform.'
     },
     {
-        question: 'Can I use Ranqiify for free?',
-        answer: 'Yes!, Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.'
+        question: 'How can I contact Haven Heights customer support?',
+        answer: 'You can contact Haven Heights customer support by visiting the "Contact Us" page on our website. Fill out the contact form with your name, email, and message, and our support team will get back to you promptly. Alternatively, you can reach us via email or phone as provided on the contact page.'
     },
     {
-        question: 'Can I use Ranqiify for free?',
-        answer: 'Yes!, Next.js is a React framework that enables functionality such as server-side rendering and generating static websites.'
+        question: 'Are there any fees for using Haven Heights?',
+        answer: 'Browsing properties on Haven Heights is free for users. However, listing properties and certain premium features may incur fees. We offer various pricing plans to accommodate different needs. Please visit our pricing page for detailed information on the available plans and their respective costs.'
     },
-    
-];
+    {
+        question: 'How secure is my data on Haven Heights?',
+        answer: 'At Haven Heights, we prioritize the security of your data. We implement robust security measures, including encryption, secure servers, and regular security audits, to ensure your personal and property information is protected. Your data is handled in accordance with our privacy policy.'
+    },
+    { 
+        question: 'How do I schedule a property viewing?',
+        answer: 'To schedule a property viewing, find the property you\'re interested in and click on the "Schedule a Viewing" button. Fill out the form with your preferred date and time, and the property owner or agent will confirm the appointment. You will receive a notification once the appointment is confirmed.'
+    },
+    {
+        question: 'Can I get a mortgage through Haven Heights?',
+        answer: 'Haven Heights collaborates with several financial institutions to help users obtain mortgages. You can use our mortgage calculator to estimate your monthly payments and explore mortgage options. For detailed assistance, contact our support team or visit the "Mortgage Assistance" section on our website.'
+    }
+];         
+
+
+
+
+
+
+
+
 
 $(document).ready(function() {
     faqData.forEach(function(faq, index) {

@@ -116,10 +116,11 @@
                 <li><a href="{% url 'listings:listings_list' %}">Properties</a></li>
                 <li><a href="{% url 'listings:listing_filter' sale_status='rent' %}">Rent</a></li>
                 <li><a href="{% url 'listings:listing_filter' sale_status='sale'%}">Buy</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Faq</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'about' %}">About Us</a></li>  {# Link to the about page #}
+                <li><a href="{% url 'faq' %}">Faq</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
             </div>
             <div class="navbar-btn" style="display: flex;justify-content: center;align-items: center;gap: 1.6em;">
                 

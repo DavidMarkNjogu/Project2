@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Haven Heights{% endblock %}
+
+{% block head %}
+    {{ block.super }}  {# This includes the base head content #}
+    <!-- Additional CSS for the contact section -->
+    <link rel="stylesheet" href="{% static 'style/css/pages.css' %}">
+{% endblock %}
+
+{% block content %}
+    <!-- Existing content of the homepage -->
+
+    <!-- CTA START -->
+    <div class="cta">
+        <div class="cta-container">
+            <h1>Have a Question? We'd love to hear from you</h1>
+            <a href="#contact-form">
+                <button>Contact Us</button>
+            </a>
+        </div>
+    </div>
+    <!-- CTA END -->
+
+    <!-- CONTACT US SECTION START -->
+    <section id="contact-form" class="contact-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+                <button type="reset" class="btn btn-danger">Reset</button> <!-- Reset button to clear the form -->
+              </form>
+
+            <div class="contact-info mt-5">
+                <h3>Contact Information</h3>
+                <p><strong>Phone:</strong> 123-456-7890</p>
+                <p><strong>Email:</strong> <a href="mailto:help@example.com">help@example.com</a></p>
+                <p><strong>Address:</strong> 123 Main St, City, State, Zip</p>
+            </div>
+
+            <div class="map mt-5">
+                <h3>Our Location</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509123!2d144.9537353153164!3d-37.81627997975157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f3b3%3A0x5045675218ceed0!2sYour%20Business%20Name!5e0!3m2!1sen!2sau!4v1616161616161!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT US SECTION END -->
+    <!-- <script>
+      function showSpinner() {
+          document.getElementById('spinner').style.display = 'block'; // Show spinner on form submission
+      }
+      </script> -->
+
+{% endblock %}
+
+
+<!-- Contact Form Section
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form action="{% url 'contact' %}" method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</section> -->

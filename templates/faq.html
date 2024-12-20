@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block head %}
+    {{ block.super }}  {# This includes the base head content #}
+    <link rel="stylesheet" href="{% static 'style/css/pages.css' %}"> {# Link to the about-specific CSS #}
+{% endblock %}
+
+
+{% block content %}
+<!-- FAQ START -->
+<section class='faq-section'>
+    <div class="faq-container">
+        <h1>Frequently <span>Asked</span> Questions</h1>
+        <div class="faq-container-wrap" id="faq-container-wrap">
+            <!-- FAQ items will be inserted here by JavaScript -->
+        </div>
+        <p style="font-size: 18px;" class="faq-p">Click <a href="" style="color: var(--maroon);">Here</a> to see more faqs, or contact us if you have more questions.</p>
+    </div>
+</section>
+<!-- FAQ END -->
+
+{% endblock %}
