@@ -1,5 +1,10 @@
+from django.conf.global_settings import AUTH_USER_MODEL
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
+from properties import settings
+from properties.settings import AUTH_USER_MODEL
+
 
 class Property(models.Model):
     title = models.CharField(max_length=100)  # Title of the property
@@ -23,7 +28,7 @@ class Inquiry(models.Model):
         unique_together = (("property", "user_email"),)  # Ensure unique inquiry per property and email
 
 class DashboardActivity(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)  # Foreign key to the User model
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     activity_type = models.CharField(max_length=100)  # Type of activity performed
     activity_date = models.DateTimeField(auto_now_add=True)  # Timestamp for activity date
 
@@ -35,7 +40,7 @@ class DashboardActivity(models.Model):
         return f"{self.user.username} - {self.activity_type}"
 
 class UserProfile(models.Model):
-    user = models.OneToOneField('auth.User', on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     bio = models.TextField()
     profile_picture = models.ImageField(upload_to='profile_pics/')
 
